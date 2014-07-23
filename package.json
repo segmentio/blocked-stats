@@ -1,6 +1,6 @@
 {
   "name": "blocked-stats",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "Counts and logs based upon how often the event loop is blocked",
   "keywords": [],
   "author": "Segment.io team@segment.io",
