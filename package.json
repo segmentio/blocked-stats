@@ -1,0 +1,22 @@
+{
+  "name": "blocked-stats",
+  "version": "0.0.1",
+  "description": "Counts and logs based upon how often the event loop is blocked",
+  "keywords": [],
+  "author": "Segment.io team@segment.io",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/segmentio/blocked-stats.git"
+  },
+  "dependencies": {
+    "blocked": "^1.0.0",
+    "debug": "^1.0.4"
+  },
+  "publishConfig": {
+    "registry": "https://segmentio.registry.nodejitsu.com"
+  },
+  "main": "index",
+  "devDependencies": {
+    "s-counters": "^2.1.0"
+  }
+}
