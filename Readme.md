@@ -8,7 +8,7 @@
 ```js
 var log = require('s-logger')({});
 var counters = require('s-counters');
-var blocked = require('blocked-stats')
+var blocked = require('s-blocked-stats');
 
 /**
  * Send data whenever the event loop blocks.
