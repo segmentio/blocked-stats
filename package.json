@@ -17,6 +17,6 @@
   },
   "main": "index",
   "devDependencies": {
-    "s-counters": "^2.1.0"
+    "statsy": "^0.2.0"
   }
 }

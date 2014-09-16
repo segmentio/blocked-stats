@@ -1,9 +1,8 @@
-var Counters = require('s-counters');
+var stats = require('statsy')({ prefix: 'example' });
 var blocked = require('./');
 
-var counters = Counters({ log: console });
-blocked(console, counters);
-Array(400000000).join('a');
+blocked(console, stats);
+Array(40000000).join('a');
 
 setTimeout(function(){
   process.exit();
