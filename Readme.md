@@ -7,14 +7,14 @@
 
 ```js
 var log = require('s-logger')({});
-var counters = require('s-counters');
+var stats = require('statsy')({});
 var blocked = require('s-blocked-stats');
 
 /**
  * Send data whenever the event loop blocks.
  */
 
-blocked(log, counters);
+blocked(log, stats);
 ```
 
 ## License
