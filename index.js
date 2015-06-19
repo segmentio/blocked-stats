@@ -1,6 +1,6 @@
 
 var blocked = require('blocked');
-var debug = require('debug')('s-blocked-stats');
+var debug = require('debug')('blocked-stats');
 
 /**
  * Provide stats about when the event loop is blocked to the logger
