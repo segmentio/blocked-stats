@@ -6,9 +6,9 @@
 ## Usage
 
 ```js
-var log = require('s-logger')({});
+var log = require('@segment/logger')({});
 var stats = require('statsy')({});
-var blocked = require('s-blocked-stats');
+var blocked = require('@segment/blocked-stats');
 
 /**
  * Send data whenever the event loop blocks.
