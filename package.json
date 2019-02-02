@@ -2,7 +2,7 @@
   "main": "index",
   "types": "index.d.ts",
   "name": "@segment/blocked-stats",
-  "version": "2.1.2",
+  "version": "2.2.0",
   "description": "Counts and logs based upon how often the event loop is blocked",
   "keywords": [],
   "author": "Segment.io team@segment.io",
