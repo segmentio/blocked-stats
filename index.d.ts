@@ -12,4 +12,4 @@ interface StatsD {
   histogram(stat: string, value: any): any
 }
 
-export default function blockedStats(logger: LoggerWarn | LoggerWarning, stats: StatsD): void
+export default function blockedStats(logger: LoggerWarn | LoggerWarning, stats: StatsD): () => void

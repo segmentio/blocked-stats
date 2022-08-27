@@ -8,7 +8,7 @@ var debug = require('debug')('blocked-stats');
  *
  * @param {Logger} log
  * @param {Counters} counters
- * @return
+ * @return function that stops the blocked timer
  */
 
 module.exports = function(log, stats){
@@ -16,10 +16,13 @@ module.exports = function(log, stats){
   // support both `log.warn()` and `log.warning()`, as our ecs-log-js uses `.warning()`
   // TODO: emit events rather than requiring "log" and "stats" interfaces
   var warn = (log.warn || log.warning).bind(log)
-  blocked(function(ms){
+  var timer = blocked(function(ms){
     stats.histogram('event-loop-blocked', ms)
     if (ms > 10000) log.error(msg, { ms: ms })
     else if (ms > 1000) warn(msg, { ms: ms })
     else if (ms > 100) debug('Event loop blocked for %sms', ms | 0);
   });
+  return function(){
+    clearInterval(timer) // stop the timer
+  }
 };
