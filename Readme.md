@@ -14,7 +14,11 @@ var blocked = require('@segment/blocked-stats');
  * Send data whenever the event loop blocks.
  */
 
-blocked(log, stats);
+const stopBlockedStats = blocked(log, stats);
+
+
+// invoke on server/tests Tear Down:
+stopBlockedStats();
 ```
 
 ## License
